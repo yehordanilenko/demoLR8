@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #fbec5d;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demolr8.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <Label prefHeight="46.0" prefWidth="415.0" text="Введите название валюты(полное/частичное), курс которой хотите узнать" />
+   <TextField fx:id="searching" maxWidth="285.0" onAction="#onTextEnterFinish" prefHeight="47.0" prefWidth="285.0" promptText="Введите название валюты кириллицей" style="-fx-background-color: #fbec5d;" translateX="1.0">
+      <font>
+         <Font size="14.0" />
+      </font></TextField>
+    <Label fx:id="correctLabel" minHeight="18.0" minWidth="90.0" />
+    <Button fx:id="button" mnemonicParsing="false" onAction="#loadCurrency" prefHeight="44.0" prefWidth="300.0" style="-fx-background-color: #0099ff;" text="Загрузка данных и добавление их в БД" textAlignment="CENTER">
+        <font>
+            <Font size="15.0" />
+        </font>
+    </Button>
+    <TableView fx:id="table" minWidth="500.0" prefHeight="210.0" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="r030" minWidth="75.0" text="r030" />
+            <TableColumn fx:id="txt" minWidth="-1.0" prefWidth="219.0" text="txt" />
+            <TableColumn fx:id="rate" minWidth="57.0" prefWidth="57.0" text="rate" />
+            <TableColumn fx:id="cc" minWidth="75.0" text="cc" />
+            <TableColumn fx:id="exchangeDate" minWidth="149.0" text="exchangeDate" />
+        </columns>
+    </TableView>
+   <Button fx:id="finishing" mnemonicParsing="false" onAction="#finishing" style="-fx-background-color: #66cc33;" text="Выход" />
+</VBox>
